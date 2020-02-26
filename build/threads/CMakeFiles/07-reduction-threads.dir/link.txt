@@ -1,0 +1,1 @@
+/usr/bin/cc -std=c99 -march=native -fopt-info-vec -O3 -DNDEBUG  -rdynamic CMakeFiles/07-reduction-threads.dir/07-reduction-threads.c.o  -o 07-reduction-threads -lpthread -lm 

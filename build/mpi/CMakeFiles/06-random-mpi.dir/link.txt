@@ -1,0 +1,1 @@
+/usr/bin/cc -std=c99 -march=native -fopt-info-vec -O3 -DNDEBUG  -rdynamic CMakeFiles/06-random-mpi.dir/06-random-mpi.c.o  -o 06-random-mpi -lmpich -lm 

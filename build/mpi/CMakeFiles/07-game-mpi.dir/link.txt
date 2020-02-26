@@ -1,0 +1,1 @@
+/usr/bin/cc -std=c99 -march=native -fopt-info-vec -O3 -DNDEBUG  -rdynamic CMakeFiles/07-game-mpi.dir/07-game-mpi.c.o  -o 07-game-mpi -lmpich -lm 

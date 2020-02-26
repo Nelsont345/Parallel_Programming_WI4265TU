@@ -1,0 +1,1 @@
+/usr/bin/cc -std=c99 -march=native -fopt-info-vec -fopenmp -O3 -DNDEBUG  -rdynamic CMakeFiles/03-axpy-openmp.dir/03-axpy-openmp.c.o  -o 03-axpy-openmp -lm 

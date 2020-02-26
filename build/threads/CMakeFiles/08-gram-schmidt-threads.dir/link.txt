@@ -1,0 +1,1 @@
+/usr/bin/cc -std=c99 -march=native -fopt-info-vec -O3 -DNDEBUG  -rdynamic CMakeFiles/08-gram-schmidt-threads.dir/08-gram-schmidt-threads.c.o  -o 08-gram-schmidt-threads -lpthread -lm 

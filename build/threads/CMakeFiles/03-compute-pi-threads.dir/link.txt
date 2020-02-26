@@ -1,0 +1,1 @@
+/usr/bin/cc -std=c99 -march=native -fopt-info-vec -O3 -DNDEBUG  -rdynamic CMakeFiles/03-compute-pi-threads.dir/03-compute-pi-threads.c.o  -o 03-compute-pi-threads -lpthread -lm 

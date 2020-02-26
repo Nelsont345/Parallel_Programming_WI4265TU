@@ -1,0 +1,1 @@
+/usr/bin/cc -std=c99 -march=native -fopt-info-vec -O3 -DNDEBUG  -rdynamic CMakeFiles/09-thread-local.dir/09-thread-local.c.o  -o 09-thread-local -lpthread -lm 

@@ -1,0 +1,1 @@
+/usr/bin/cc -std=c99 -march=native -fopt-info-vec -O3 -DNDEBUG  -rdynamic CMakeFiles/05-fifo-threads.dir/05-fifo-threads.c.o  -o 05-fifo-threads -lpthread -lm 

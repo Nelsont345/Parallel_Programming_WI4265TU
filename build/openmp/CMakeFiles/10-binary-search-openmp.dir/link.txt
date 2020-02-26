@@ -1,0 +1,1 @@
+/usr/bin/cc -std=c99 -march=native -fopt-info-vec -fopenmp -O3 -DNDEBUG  -rdynamic CMakeFiles/10-binary-search-openmp.dir/10-binary-search-openmp.c.o  -o 10-binary-search-openmp -lm 

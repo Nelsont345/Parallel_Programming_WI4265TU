@@ -1,0 +1,1 @@
+/usr/bin/cc -std=c99 -march=native -fopt-info-vec -O3 -DNDEBUG  -rdynamic CMakeFiles/06-barrier-threads.dir/06-barrier-threads.c.o  -o 06-barrier-threads -lpthread -lm 

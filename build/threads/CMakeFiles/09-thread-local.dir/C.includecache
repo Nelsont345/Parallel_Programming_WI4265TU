@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/nelson/Documents/WI4265TU Parallel Programming/examples/threads/09-thread-local.c
+stdio.h
+-
+assert.h
+-
+pthread.h
+-
+

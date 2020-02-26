@@ -1,0 +1,1 @@
+/usr/bin/cc -std=c99 -march=native -fopt-info-vec -fopenmp -O3 -DNDEBUG  -rdynamic CMakeFiles/09-random-openmp.dir/09-random-openmp.c.o  -o 09-random-openmp -lm 

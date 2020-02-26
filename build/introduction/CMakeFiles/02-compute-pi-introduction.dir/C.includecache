@@ -1,0 +1,44 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/nelson/Documents/WI4265TU Parallel Programming/examples/introduction/02-compute-pi-introduction.c
+stdio.h
+-
+stdarg.h
+-
+stdlib.h
+-
+string.h
+-
+minimpi.h
+/home/nelson/Documents/WI4265TU Parallel Programming/examples/introduction/minimpi.h
+
+/home/nelson/Documents/WI4265TU Parallel Programming/examples/introduction/minimpi.h
+mpi.h
+-
+
+/usr/include/mpich/mpi.h
+stddef.h
+-
+cstdint
+-
+stdint.h
+-
+mpio.h
+/usr/include/mpich/mpio.h
+mpicxx.h
+/usr/include/mpich/mpicxx.h
+
+/usr/include/mpich/mpicxx.h
+stdio.h
+-
+
+/usr/include/mpich/mpio.h
+mpi.h
+/usr/include/mpich/mpi.h
+

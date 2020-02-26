@@ -1,0 +1,1 @@
+/usr/bin/cc -std=c99 -march=native -fopt-info-vec -O3 -DNDEBUG  -rdynamic CMakeFiles/02-rank-threads.dir/02-rank-threads.c.o  -o 02-rank-threads -lpthread -lm 

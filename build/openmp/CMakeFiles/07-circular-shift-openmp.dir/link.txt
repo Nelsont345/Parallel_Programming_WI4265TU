@@ -1,0 +1,1 @@
+/usr/bin/cc -std=c99 -march=native -fopt-info-vec -fopenmp -O3 -DNDEBUG  -rdynamic CMakeFiles/07-circular-shift-openmp.dir/07-circular-shift-openmp.c.o  -o 07-circular-shift-openmp -lm 

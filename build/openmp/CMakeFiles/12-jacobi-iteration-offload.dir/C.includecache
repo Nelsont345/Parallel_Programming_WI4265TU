@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/nelson/Documents/WI4265TU Parallel Programming/examples/openmp/12-jacobi-iteration-offload.c
+math.h
+-
+stdio.h
+-
+stdlib.h
+-
+omp.h
+-
+

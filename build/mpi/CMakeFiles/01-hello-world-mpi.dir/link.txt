@@ -1,0 +1,1 @@
+/usr/bin/cc -std=c99 -march=native -fopt-info-vec -O3 -DNDEBUG  -rdynamic CMakeFiles/01-hello-world-mpi.dir/01-hello-world-mpi.c.o  -o 01-hello-world-mpi -lmpich -lm 

@@ -1,0 +1,1 @@
+/usr/bin/cc -std=c99 -march=native -fopt-info-vec -fopenmp -O3 -DNDEBUG  -rdynamic CMakeFiles/02-compute-pi-openmp.dir/02-compute-pi-openmp.c.o  -o 02-compute-pi-openmp -lm 

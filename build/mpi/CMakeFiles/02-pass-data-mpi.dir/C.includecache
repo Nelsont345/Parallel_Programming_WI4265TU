@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/nelson/Documents/WI4265TU Parallel Programming/examples/mpi/02-pass-data-mpi.c
+stdio.h
+-
+mpi.h
+-
+
+/usr/include/mpich/mpi.h
+stddef.h
+-
+cstdint
+-
+stdint.h
+-
+mpio.h
+/usr/include/mpich/mpio.h
+mpicxx.h
+/usr/include/mpich/mpicxx.h
+
+/usr/include/mpich/mpicxx.h
+stdio.h
+-
+
+/usr/include/mpich/mpio.h
+mpi.h
+/usr/include/mpich/mpi.h
+

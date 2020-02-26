@@ -1,0 +1,1 @@
+/usr/bin/cc -std=c99 -march=native -fopt-info-vec -O3 -DNDEBUG  -rdynamic CMakeFiles/05-gram-schmidt.dir/05-gram-schmidt.c.o  -o 05-gram-schmidt -lmpich -lm 

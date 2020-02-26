@@ -1,0 +1,1 @@
+/usr/bin/cc -std=c99 -march=native -fopt-info-vec -fopenmp -O3 -DNDEBUG  -rdynamic CMakeFiles/12-jacobi-iteration-offload.dir/12-jacobi-iteration-offload.c.o  -o 12-jacobi-iteration-offload -lm 

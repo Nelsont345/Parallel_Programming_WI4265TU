@@ -1,0 +1,1 @@
+/usr/bin/cc -std=c99 -march=native -fopt-info-vec -O3 -DNDEBUG  -rdynamic CMakeFiles/01-game-introduction.dir/01-game-introduction.c.o  -o 01-game-introduction -lmpich -lm 

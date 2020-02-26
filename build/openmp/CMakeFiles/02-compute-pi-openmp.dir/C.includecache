@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/nelson/Documents/WI4265TU Parallel Programming/examples/openmp/02-compute-pi-openmp.c
+stdio.h
+-
+stdarg.h
+-
+stdlib.h
+-
+string.h
+-
+omp.h
+/home/nelson/Documents/WI4265TU Parallel Programming/examples/openmp/omp.h
+

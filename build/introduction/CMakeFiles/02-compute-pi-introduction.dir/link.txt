@@ -1,0 +1,1 @@
+/usr/bin/cc -std=c99 -march=native -fopt-info-vec -O3 -DNDEBUG  -rdynamic CMakeFiles/02-compute-pi-introduction.dir/02-compute-pi-introduction.c.o  -o 02-compute-pi-introduction -lmpich -lm 

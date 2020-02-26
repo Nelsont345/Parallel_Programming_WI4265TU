@@ -1,0 +1,1 @@
+/usr/bin/cc -std=c99 -march=native -fopt-info-vec -O3 -DNDEBUG  -rdynamic CMakeFiles/04-circular-shift-mpi.dir/04-circular-shift-mpi.c.o  -o 04-circular-shift-mpi -lmpich -lm 

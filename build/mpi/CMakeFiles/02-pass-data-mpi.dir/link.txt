@@ -1,0 +1,1 @@
+/usr/bin/cc -std=c99 -march=native -fopt-info-vec -O3 -DNDEBUG  -rdynamic CMakeFiles/02-pass-data-mpi.dir/02-pass-data-mpi.c.o  -o 02-pass-data-mpi -lmpich -lm 

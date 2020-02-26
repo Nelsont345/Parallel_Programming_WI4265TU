@@ -1,0 +1,1 @@
+/usr/bin/cc -std=c99 -march=native -fopt-info-vec -fopenmp -O3 -DNDEBUG  -rdynamic CMakeFiles/05-dyadic-product-openmp.dir/05-dyadic-product-openmp.c.o  -o 05-dyadic-product-openmp -lm 
