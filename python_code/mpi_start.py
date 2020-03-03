@@ -11,15 +11,9 @@ from subprocess import call
 
 comm = MPI.COMM_WORLD
 rank = MPI.COMM_WORLD.Get_rank()
-print (comm.rank, comm.size)
 
-#cmd = "processCcd.py DATA --rerun processCcdOutputs --id visit=%d ccd=%d" % (visit, ccd)
-cmd = "sleep 3"
-call(cmd, shell=1)
 
-#MPI.Init()    #occurs automatically
-
-end = 5  #relates to number of processors
+end = 6  #relates to number of processors
 
 if rank == 0:
     data = 4#{'a': 7, 'b': 3.14}

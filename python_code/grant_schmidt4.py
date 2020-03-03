@@ -12,11 +12,11 @@ import numpy as np
 comm = MPI.COMM_WORLD
 rank = MPI.COMM_WORLD.Get_rank()
 
-dimensions = 4
+dimensions = 3
 
 np.random.seed(0)
-matrix_values = np.array([[np.random.rand(1) for i in range(dimensions)]for j in range(dimensions)])
-
+#matrix_values = np.array([[np.random.rand(1) for i in range(dimensions)]for j in range(dimensions)])
+matrix_values = np.array([[1.0, 1.0, 0.0], [1.0, 3.0, 1.0], [2.0, -1.0, 1.0]]) #columns
 #%% calculate ck
 
 
@@ -24,6 +24,7 @@ matrix_values = np.array([[np.random.rand(1) for i in range(dimensions)]for j in
     
     
 def calc_new_row_elements(row):
+    """Calculates a new unormalised row element"""
     c_set = [0. for i in range(dimensions)]
     new_row = row
     for i in np.arange(1, len(row)):
@@ -40,9 +41,8 @@ if rank == 0:
     data = new_row_unormalised*new_row_unormalised
     comm.send(data, dest=1, tag=11)
     normalisation_constant = np.sqrt(comm.recv(source=dimensions-1, tag=11))
-    #print(new_row_unormalised, rank )
-#    print(normalisation_constant)   
     for i in np.arange(1, dimensions):
+        
         comm.send(normalisation_constant, dest=i, tag=12)
     print(new_row_unormalised/normalisation_constant, rank)     
         
