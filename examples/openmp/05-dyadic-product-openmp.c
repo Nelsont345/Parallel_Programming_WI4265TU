@@ -9,15 +9,16 @@
 
 int main( int argc, char** argv )
 {
-    const int n=1000;
+    const int n=9;
     int x[n],y[n];
     int d[n][n];
 
     /* Initialization */
-    for (int i=0; i<n; i++)
-    {
-        x[i] = i; y[i]= i ;
-    }
+    #pragma omp parallel for shared(x, y)
+        for (int i=0; i<n; i++)
+        {
+            x[i] = i; y[i]= i ;
+        }
 
     /* Sequential dyadic product */
     for (int i=0; i<n; i++)

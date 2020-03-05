@@ -24,9 +24,10 @@ for ( j = 0; j < N; j++)
 
         for ( i = 0; i < N; i++ )
         {c[k] += a[i][k] * a[i][j];
-        d[k] += a[i][j]* a[i][j];
+        d[k] += a[i][k]* a[i][k];
         }
-
+    //printf("row %d, %f \n", k, c[k]);
+    //printf("row %d, %f \n", k, d[k]);
     }
     for ( k = 0; k < j; k++ )
     {
@@ -47,6 +48,7 @@ for ( i = 0; i < N; i++ )
 {a[i][j] *= t;
 }
 */
+
 //print out columns
 for (i=0; i < N; i++)
 {
@@ -56,6 +58,6 @@ for (i=0; i < N; i++)
     }
     printf("\n");
 }
-printf("\n");
+
 return 0;
 }
