@@ -1,4 +1,5 @@
 #include<stdio.h>
+#include<stdlib.h>
 #ifdef _OPENMP
 #include<omp.h>
 #else
@@ -9,26 +10,32 @@
 
 int main( int argc, char** argv )
 {
-    const int n=9;
-    int x[n],y[n];
-    int d[n][n];
+    const int n=10000;
+    int  *x = malloc(sizeof(int)*n);
+    int  *y = malloc(sizeof(int)*n);
+    int *d[n];
+    for (int i=0;i<n;i++)
+    {
+        d[i] = (int *)malloc(sizeof(int)*n);
+    }
 
-    /* Initialization */
+ 
     #pragma omp parallel for shared(x, y)
         for (int i=0; i<n; i++)
         {
             x[i] = i; y[i]= i ;
         }
 
-    /* Sequential dyadic product */
+    #pragma omp parallel for shared(d, x, y) schedule(static, 20) collapse(2)
     for (int i=0; i<n; i++)
         for (int j=0; j<n; j++)
     {
         d[i][j] = x[i]*y[j];
     }
-
+/*   
     if (n<10)
     {
+        
         printf("Dyadic product:\n");
         for (int i=0; i<n; i++)
         {
@@ -39,6 +46,6 @@ int main( int argc, char** argv )
     }
     else
         printf("Dyadic product:\nSet N<10 to produce output\n");
-    
+        */
     return 0;
 }
