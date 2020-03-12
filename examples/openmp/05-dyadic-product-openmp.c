@@ -26,13 +26,13 @@ int main( int argc, char** argv )
             x[i] = i; y[i]= i ;
         }
 
-    #pragma omp parallel for shared(d, x, y) schedule(static, 20) collapse(2)
+    #pragma omp parallel for shared(d, x, y) schedule(static, 7373) collapse(2)
     for (int i=0; i<n; i++)
         for (int j=0; j<n; j++)
     {
         d[i][j] = x[i]*y[j];
     }
-/*   
+   
     if (n<10)
     {
         
@@ -46,6 +46,6 @@ int main( int argc, char** argv )
     }
     else
         printf("Dyadic product:\nSet N<10 to produce output\n");
-        */
+        
     return 0;
 }
