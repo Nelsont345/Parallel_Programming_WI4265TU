@@ -11,33 +11,52 @@
 
 int main ( int argc, char** argv )
 {
-    const int    N = 500;
-    const int    M = 500;
-    const int    O = 500;
-    
-    double       A[N][M];
-    double       B[M][O];
-    double       C[N][O];
+    const int    N = 5;
+    const int    M = 5;
+    const int    O = 5;
+
+    int *A[N];
+    for (int i=0;i<N;i++)
+    {
+        A[i] = (int *)malloc(sizeof(int)*M);
+    }
+
+    int *B[M];
+    for (int i=0;i<M;i++)
+    {
+        B[i] = (int *)malloc(sizeof(int)*O);
+    }
+
+    int *C[O];
+    for (int i=0;i<O;i++)
+    {
+        C[i] = (int *)malloc(sizeof(int)*N);
+    }
+
+
 
     /* Initialize the matrices. */
-
+    #pragma omp parallel for num_threads(2) collapse(2)
     for ( int i = 0; i < N; i++ )
         for ( int j = 0; j < M; j++ )
             {
                 A[i][j] = i+j;
             }
 
+    #pragma omp parallel for num_threads(2) collapse(2)
     for ( int i = 0; i < M; i++ )
         for ( int j = 0; j < O; j++ )
             {
                 B[i][j] = i+j;
             }
 
-    /* Sequential matrix-matrix multiplication. */
+    
 
+    
+    
     for ( int i = 0; i < N; i++ )
         for ( int k = 0; k < O; k++ )
-            {
+            {   C[i][k] =0;
                 for ( int j = 0; j < M; j++ )
                     C[i][k] += A[i][j] * B[j][k];
             }
@@ -48,7 +67,7 @@ int main ( int argc, char** argv )
         for (int i=0; i<N; i++)
         {
             for (int k=0; k<O; k++)
-                printf("%f ", C[i][k]);
+                printf("%d ", C[i][k]);
             printf("\n");
         }
     }

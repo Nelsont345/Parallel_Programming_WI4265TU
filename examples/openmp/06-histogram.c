@@ -32,7 +32,6 @@ int main( int argc, char** argv )
       *r[i] = rand() % M;
     }
 
-
     #pragma omp for
     for (int i=0; i<M; i++)
     {
